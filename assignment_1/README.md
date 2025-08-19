@@ -1,5 +1,7 @@
 # Assignment 1
 
+<img src="assets/img/lena.png" alt="Lena" align="right" width="200" style="margin-left: 16px; margin-bottom: 8px;" />
+
 This assignment loads an image (Lena) and prints basic image information, and saves simple webcam information to a text file.
 
 ## Files
