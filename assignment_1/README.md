@@ -4,7 +4,7 @@
 
 This assignment loads an image (Lena) and prints basic image information, and saves simple webcam information to a text file.
 
-## Files
+**Files:**
 
 - Image: `assets/img/lena.png`
 - Screenshot: `assets/img/step_4_printout.png`
