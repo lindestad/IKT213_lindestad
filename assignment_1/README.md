@@ -39,9 +39,8 @@ pixi run python tests/show_camera.py
 ```powershell
 # from repo root
 uv venv .venv
-# Then activate the virtual environment, the last command will include a print of the activation command appropriate for your shell
-uv pip install --upgrade pip
-uv pip install opencv-python numpy
+# Then activate the virtual environment (command printed by uv)
+uv sync
 python assignment_1/main.py
 ```
 
