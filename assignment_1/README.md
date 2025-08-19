@@ -6,9 +6,24 @@ This assignment loads an image (Lena) and prints basic image information, and sa
 
 **Files:**
 
-- Image: `assets/img/lena.png`
-- Screenshot: `assets/img/step_4_printout.png`
-- Camera info output: `solutions/camera_outputs.txt`
+- Image: [assets/img/lena.png](assets/img/lena.png)
+- Screenshot: [assets/img/step_4_printout.png](assets/img/step_4_printout.png)
+- Camera info output: [solutions/camera_outputs.txt](solutions/camera_outputs.txt)
+- Python script: [main.py](main.py)
+
+## Step IV Screenshot
+
+![Step IV Screenshot](assets/img/step_4_printout.png)
+
+## Step V Camera Outputs
+
+Text file at [solutions/camera_outputs.txt](solutions/camera_outputs.txt) contains:
+
+```text
+fps: 30
+height: 480
+width: 640
+```
 
 ## Run with Pixi
 
@@ -24,7 +39,7 @@ pixi run python tests/show_camera.py
 ```powershell
 # from repo root
 uv venv .venv
-.\.venv\Scripts\Activate.ps1
+# Then activate the virtual environment, the last command will include a print of the activation command appropriate for your shell
 uv pip install --upgrade pip
 uv pip install opencv-python numpy
 python assignment_1/main.py
@@ -41,6 +56,6 @@ python assignment_1/main.py
 
 ## Links
 
-- Lena image: `assets/img/lena.png`
-- Printout screenshot: `assets/img/step_4_printout.png`
-- Camera outputs: `solutions/camera_outputs.txt`
+- Lena image: [assets/img/lena.png](assets/img/lena.png)
+- Printout screenshot: [assets/img/step_4_printout.png](assets/img/step_4_printout.png)
+- Camera outputs: [solutions/camera_outputs.txt](solutions/camera_outputs.txt)
