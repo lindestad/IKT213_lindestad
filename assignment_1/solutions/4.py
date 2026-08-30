@@ -12,7 +12,7 @@ def print_image_information(image: NDArray):
     size = image.size
     dtype = image.dtype
     print(
-        f"Iris-1.jpg image information:\nA: Height: {height}\nB: Width: {width}\nC: Channels: {channels}\nD: Size: {size}\nE: Data type: {dtype}"
+        f"Iris-1.jpg image information:\nA: Height: {height}\nB: Width: {width}\nC: Channels: {channels}\nD: Size: {size:,}\nE: Data type: {dtype}"
     )
 
 
