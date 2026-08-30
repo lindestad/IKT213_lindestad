@@ -16,3 +16,7 @@ Conda works as well:
 conda create --name ikt213 python=3.13 opencv numpy
 conda activate ikt213
 ```
+
+## Assignments
+
+- [Assignment 1](assignment_1/README.md)
