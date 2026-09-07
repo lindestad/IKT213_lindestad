@@ -46,6 +46,11 @@ def resize(image: CvImage, width, height) -> CvImage:
     return cv2.resize(image, (width, height))
 
 
+# 4. A, B
+def copy(image, emptyPictureArray):
+    emptyPictureArray[:, :, :] = image[:, :, :]
+
+
 def main():
     iris: CvImage | None = cv2.imread(IRIS_PATH)
     assert iris is not None  # File loaded
@@ -61,6 +66,14 @@ def main():
     # 3. C, D
     iris_resized = resize(iris, 200, 200)
     cv2.imwrite("iris_resized.jpg", iris_resized)
+
+    # 4. C, D
+    height, width, _ = iris.shape
+    emptyPictureArray = np.zeros((height, width, 3), dtype=np.uint8)
+    copy(
+        iris, emptyPictureArray
+    )  # Copies pixels over, emptyPictureArray no longer empty
+    cv2.imwrite("iris_copied.jpg", emptyPictureArray)
 
 
 if __name__ == "__main__":
