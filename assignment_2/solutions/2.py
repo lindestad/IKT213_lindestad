@@ -10,7 +10,14 @@ IRIS_PATH = Path(__file__).parent / "assets" / "iris.png"
 
 
 def padding(image: CvImage, border_width) -> CvImage:
-    pass
+    return cv2.copyMakeBorder(
+        image,
+        border_width,
+        border_width,
+        border_width,
+        border_width,
+        cv2.BORDER_REFLECT,
+    )
 
 
 # 2. A, B
@@ -36,6 +43,10 @@ def crop(image: CvImage, x_0, x_1, y_0, y_1) -> CvImage:
 def main():
     iris: CvImage | None = cv2.imread(IRIS_PATH)
     assert iris is not None  # File loaded
+
+    # 1. C, D
+    iris_bordered = padding(iris, 200)
+    cv2.imwrite("iris_bordered.jpg", iris_bordered)
 
     # 2. C, D
     iris_cropped = crop(iris, 200, 130, 200, 130)
