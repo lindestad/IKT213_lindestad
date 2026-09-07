@@ -9,6 +9,7 @@ type CvImage = cv2.typing.MatLike
 IRIS_PATH = Path(__file__).parent / "assets" / "iris.png"
 
 
+# 1. A, B
 def padding(image: CvImage, border_width) -> CvImage:
     return cv2.copyMakeBorder(
         image,
@@ -40,6 +41,11 @@ def crop(image: CvImage, x_0, x_1, y_0, y_1) -> CvImage:
     return image[y_0 : (image.shape[0] - y_1), x_0 : (image.shape[1] - x_1), :]
 
 
+# 3. A, B
+def resize(image: CvImage, width, height) -> CvImage:
+    return cv2.resize(image, (width, height))
+
+
 def main():
     iris: CvImage | None = cv2.imread(IRIS_PATH)
     assert iris is not None  # File loaded
@@ -51,6 +57,10 @@ def main():
     # 2. C, D
     iris_cropped = crop(iris, 200, 130, 200, 130)
     cv2.imwrite("iris_cropped.jpg", iris_cropped)
+
+    # 3. C, D
+    iris_resized = resize(iris, 200, 200)
+    cv2.imwrite("iris_resized.jpg", iris_resized)
 
 
 if __name__ == "__main__":
