@@ -20,3 +20,4 @@ conda activate ikt213
 ## Assignments
 
 - [Assignment 1](assignment_1/README.md)
+- [Assignment 2](assignment_2/README.md)
